@@ -1,0 +1,87 @@
+.header,
+.footer,
+.header *,
+.footer * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  margin: 0;
+}
+
+.header_side{
+  font-family: "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.menu{
+  background-color: #E3E3E3;
+  min-height: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer{
+  background-color: #FFB326;
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.shopping_cart > a{
+  text-decoration: none;
+}
+
+.About_us{
+  margin-left: 800px;
+}
+
+.About_us > a{
+  text-decoration: underline;
+}
+
+.service > a{
+  text-decoration: underline;
+}
+
+.newest_photo{
+  margin-left: 120px;
+  margin-top: 200px;
+
+}
+
+.hottest_photo{
+  margin-left: 120px;
+}
+
+.newest_photo > a > img{
+  width: 240px ;
+  height: 240px;
+}
+
+
+.hottest_photo > a > img{
+  width: 240px ;
+  height: 240px;
+}
+
+.menu_bar{
+  width: 100%;
+  display: flex;
+  height: 60px;
+  background-color: black;
+  padding-top: 10px;
+  justify-content: space-around;
+}

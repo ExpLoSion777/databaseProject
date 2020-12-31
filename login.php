@@ -9,7 +9,7 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<?php include 'header.php'; ?>
 <div class="container">
 
     <div class="row">
@@ -78,3 +78,4 @@
 
 
 </div>
+  <?php include 'footer.php'; ?>

@@ -8,7 +8,7 @@
             } ?></title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<?php include 'header.php'; ?>
 <body>
 
     <div class="container">
@@ -65,3 +65,4 @@
     </div>
 
 </body>
+  <?php include 'footer.php'; ?>

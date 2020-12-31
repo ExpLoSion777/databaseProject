@@ -1,5 +1,3 @@
-CREATE DATABASE project;
-use project;
 CREATE TABLE MEMBER(
 	Id INT NOT NULL,
     Name TEXT NOT NULL, 

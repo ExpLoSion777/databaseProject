@@ -14,16 +14,7 @@
     <link href="./css/index.css" rel="stylesheet">
     <title><?php if (isset($title)) {echo $title;} ?></title>
 </head>
-  <div class="header_side">
-    <div class = "logo"><a href = "./index.php"><img src="./src/logo.png" alt="" width = "250px" height="40px"></div>
-    <form class="search" action="search.php">
-    <input type="text" placeholder="Search" name="search">
-    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-    </form>
-    <div class = "shopping_cart"><a href = "./shopping_cart.php">購物車<img src="./img/shopping_cart.png" width = "40px" height="40px"></div>
-    <div class = "register"><a class="btn btn-primary" href="./register.php" role="button">register</a></div>
-    <div class = "login"><a class="btn btn-primary" href="./login.php" role="button">Login</a></div>
-  </div>
+<?php include 'header.php'; ?>
   <div class="menu">
     <div class="menu_bar">
       <div class="dropdown show">
@@ -82,12 +73,4 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
-    <div class="copyright">
-      <p>Copyright@2020</p>
-    </div>
-    <div class="About_us"><a href="#">聯絡我們</a>
-    </div>
-    <div class="Service"><a href="#">聯絡條款</a>
-    </div>
-  </footer>
+  <?php include 'footer.php'; ?>

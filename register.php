@@ -7,11 +7,14 @@
                 echo $title;
             } ?></title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
 </head>
 <?php include 'header.php'; ?>
+
 <body>
 
-    <div class="container">
+    <div class="wrapper">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                 <form role="form" method="post" action="" autocomplete="off">
@@ -61,8 +64,7 @@
                 </form>
             </div>
         </div>
-
+        <?php include 'footer.php'; ?>
     </div>
 
 </body>
-  <?php include 'footer.php'; ?>

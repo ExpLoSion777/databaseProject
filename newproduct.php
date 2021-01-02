@@ -6,14 +6,14 @@
   $description = $_POST['description'];
   $price = $_POST['price'];
   $quantity = $_POST['quantity'];
+  $clickcount = 0;
   include 'connect.php';
-  $in = "INSERT INTO 'product' ('Id', 'ClickCount','Description', 'Price', 'Quantity') VALUES ('$name',0 ,'$description', '$price', '$quantity')";
-  mysql_query($link, 'SET NAMES utf8');
-  $result = mysql_query($link, $in);
-  if(!$result){
-    die('Error: ' . mysql_error());
+  $sql = "INSERT INTO product(Id, Name , ClickCount,Description, Price, Quantity) VALUES (null,'$name',$clickcount ,'$description', $price, $quantity)";
+  if($conn->query($sql) === TRUE){
+    echo "產品加入成功";
   }else{
-    echo "新增成功";
+    echo "產品新增失敗";
   }
-  mysql_close($link);
+  $conn->close();
+  header("Refresh:3 , url = product.php");
  ?>

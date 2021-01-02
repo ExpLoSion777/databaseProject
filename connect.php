@@ -1,13 +1,15 @@
 <?php
-$link = mysqli_connect('localhost', 'root', '123456') or die("無法開啟sql資料庫");
-
+$servername = "localhost";
+$username = "username";
+$password = "password";
 $dbname = "project";
 
-if (!mysqli_select_db($link, $dbname)){
-  die("無法開啟 $dbname 資料庫連結!<br/>");
+$conn = new mysqli($servername, $username, $password, $dbname) or die("無法開啟sql資料庫");
+
+if ($conn->connect_error){
+  die("連線錯誤： " . $conn->connect_error);
 }
 else{
-  echo "資料庫: $dbname 開啟成功!<br/>";
+  echo "資料庫 $dbname 連線成功";
 }
-mysqli_close($link);
 ?>

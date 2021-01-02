@@ -11,15 +11,20 @@
   <link href="./css/product.css" rel="stylesheet">
 </head>
 <?php include 'header.php'; ?>
-<div class="container">
-  <form class="new_product" action="newproduct.php" method="post">
-    <p>Name<input type="text" name="name"></p>
-    <p>Description<input type="text" name="description"></p>
-    <p>Price<input type="text" name="price"></p>
-    <p>Quantity<input type="text" name="quantity"></p>
-    <p><input type="submit" name="submit" value="上傳"></p>
-  </form>
-</div>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <form class="new_product" action="newproduct.php" method="post">
+        <p>Name<input type="text" name="name"></p>
+        <p>Description<input type="text" name="description"></p>
+        <p>Price<input type="text" name="price"></p>
+        <p>Quantity<input type="text" name="quantity"></p>
+        <p><input type="submit" name="submit" value="上傳"></p>
+      </form>
+    </div>
+  </div>
+</body>
 <?php include 'footer.php'; ?>
 
 </html>

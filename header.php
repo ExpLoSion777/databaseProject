@@ -16,10 +16,14 @@
 </head>
 
 <div class="header_side">
-  <div class="logo"><a href="./index.php"><img src="./img/logo.png" alt="" width="250px" height="40px"></div>
+  <div class="logo">
+    <a href="./index.php">
+      <img src="./img/logo.png" alt="" width="250px" height="40px">
+    </a>
+  </div>
   <form class="search" action="search.php">
     <input type="text" placeholder="Search" name="search">
-    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    <button type="submit">搜尋</button>
   </form>
   <div class="shopping_cart"><a href="./shopping_cart.php">購物車<img src="./img/shopping_cart.png" width="40px" height="40px"></div>
   <div class="register"><a class="btn btn-primary" href="./register.php" role="button">註冊</a></div>

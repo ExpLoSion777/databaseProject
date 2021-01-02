@@ -2,13 +2,12 @@
   background-color: #FFB326;
   position: absolute;
   width: 100%;
-  height: 60px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
-  padding-top: 20px;
+  padding-top: 15px;
   left: 0;
-  bottom: -20%;
+  bottom: 0;
 }
 
 .About_us{

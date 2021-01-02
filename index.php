@@ -19,50 +19,51 @@ $title = '線上3C商城';
 </head>
 
 <?php include 'header.php'; ?>
-<div class="menu">
-  <div class="menu_bar">
-    <div class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        SSD
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">威剛</a>
-        <a class="dropdown-item" href="#">三星</a>
-        <a class="dropdown-item" href="#">美光</a>
+<div class="wrapper">
+  <div class="menu">
+    <div class="menu_bar">
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SSD
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">威剛</a>
+          <a class="dropdown-item" href="#">三星</a>
+          <a class="dropdown-item" href="#">美光</a>
+        </div>
+      </div>
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          顯示卡
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Asus</a>
+          <a class="dropdown-item" href="#">Gigabyte</a>
+          <a class="dropdown-item" href="#">Msi</a>
+        </div>
+      </div>
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          記憶體
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">金士頓</a>
+          <a class="dropdown-item" href="#">美光</a>
+          <a class="dropdown-item" href="#">科賦</a>
+        </div>
+      </div>
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          主機板
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Asus</a>
+          <a class="dropdown-item" href="#">Gigabyte</a>
+          <a class="dropdown-item" href="#">Msi</a>
+        </div>
       </div>
     </div>
-    <div class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        顯示卡
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Asus</a>
-        <a class="dropdown-item" href="#">Gigabyte</a>
-        <a class="dropdown-item" href="#">Msi</a>
-      </div>
-    </div>
-    <div class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        記憶體
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">金士頓</a>
-        <a class="dropdown-item" href="#">美光</a>
-        <a class="dropdown-item" href="#">科賦</a>
-      </div>
-    </div>
-    <div class="dropdown show">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        主機板
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Asus</a>
-        <a class="dropdown-item" href="#">Gigabyte</a>
-        <a class="dropdown-item" href="#">Msi</a>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper">
+
     <div class="layout">
       <div class="newest_photo">
         <!--改成最新上架的商品-->
@@ -81,7 +82,6 @@ $title = '線上3C商城';
         </a>
       </div>
     </div>
-    <?php include 'footer.php'; ?>
   </div>
-
 </div>
+<?php include 'footer.php'; ?>

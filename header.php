@@ -26,6 +26,6 @@
     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
   </form>
   <div class="shopping_cart"><a href="./shopping_cart.php">購物車<img src="./img/shopping_cart.png" width="40px" height="40px"></div>
-  <div class="register"><a class="btn btn-primary" href="./register.php" role="button">register</a></div>
-  <div class="login"><a class="btn btn-primary" href="./login.php" role="button">Login</a></div>
+  <div class="register"><a class="btn btn-primary" href="./register.php" role="button">註冊</a></div>
+  <div class="login"><a class="btn btn-primary" href="./login.php" role="button">登入</a></div>
 </div>

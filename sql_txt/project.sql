@@ -1,5 +1,5 @@
 CREATE TABLE MEMBER(
-	Id INT NOT NULL,
+	Id INT NOT NULL auto_increment,
     Name TEXT NOT NULL, 
 	Account varchar(50) NOT NULL,  
 	Password varchar (20) NOT NULL,
@@ -13,7 +13,8 @@ CREATE TABLE MEMBER(
 );
 
 CREATE TABLE PRODUCT(
-	Id INT NOT NULL,
+	Id INT NOT NULL auto_increment,
+    Name TEXT not null,
     ClickCount INT NOT NULL, 
     Description TEXT,
     Price INT NOT NULL,
@@ -22,7 +23,7 @@ CREATE TABLE PRODUCT(
 );
 
 create table ORDERLIST(
-	Id INT NOT NULL,
+	Id INT NOT NULL auto_increment,
     MemberId INT NOT NULL,
     ProductQuantity INT NOT NULL,
     foreign key (MemberId) references MEMBER(Id),
@@ -30,7 +31,7 @@ create table ORDERLIST(
 );
 
 create table COUPON(
-	Id INT NOT NULL,
+	Id INT NOT NULL auto_increment,
     MemberId INT NOT NULL,
     C_Date DATE NOT NULL,
     Discount INT NOT NULL,
@@ -55,5 +56,4 @@ create table COMMENT(
 	foreign key (ProductId) references PRODUCT(Id)
 );
 
-describe project.COMMENT;
 

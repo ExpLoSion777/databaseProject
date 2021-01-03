@@ -16,7 +16,7 @@
     <div class="wrapper">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                <form role="form" method="post" action="" autocomplete="off">
+                <form role="form" method="post" action="memberCheck.php" autocomplete="off">
                     <h2>請登入</h2>
                     <p><a href='index.php'>回到首頁</a></p>
                     <hr>
@@ -44,17 +44,17 @@
                                 break;
                         }
                     }
-
-
                     ?>
 
                     <div class="form-group">
-                        <input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if (isset($error)) {
-                                                                                                                                            echo htmlspecialchars($_POST['username'], ENT_QUOTES);
-                                                                                                                                        } ?>" tabindex="1">
+                        <label>帳號</label>
+                        <input type="text" name="account" id="account" class="form-control input-lg" placeholder="Account" value="<?php if (isset($error)) {
+                                                                                                                                        echo htmlspecialchars($_POST['account'], ENT_QUOTES);
+                                                                                                                                    } ?>" tabindex="1">
                     </div>
 
                     <div class="form-group">
+                        <label>密碼</label>
                         <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3">
                     </div>
 
@@ -70,7 +70,10 @@
 
                     <hr>
                     <div class="row">
-                        <div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="登入" class="btn btn-primary btn-block btn-lg" tabindex="5"></div>
+                        <div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="登入" class="btn btn-primary btn-block btn-lg" tabindex="5">
+                        </div>
+                        <div class="col-xs-6 col-md-6"><input type="hidden" name="refer" value="<?php echo (isset($_GET['refer'])) ? $_GET['refer'] : 'index.php'; ?>" class="btn btn-primary btn-block btn-lg" tabindex="6">
+                        </div>
                     </div>
                 </form>
             </div>

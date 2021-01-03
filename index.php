@@ -19,7 +19,7 @@ $title = '線上3C商城';
             echo $title;
           } ?></title>
 </head>
-
+<?php include "loginCheck.php"; ?>
 <?php include 'header.php'; ?>
 <div class="wrapper">
   <div class="menu">

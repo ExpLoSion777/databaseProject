@@ -4,7 +4,6 @@ CREATE TABLE MEMBER(
 	Account varchar(50) NOT NULL,  
 	Password varchar (20) NOT NULL,
     PhoneNumber TEXT,
-    Credit INT NOT NULL,
     Address TEXT NOT NULL,
     Sex TEXT NOT NULL,
     Birthday DATE NOT NULL,

@@ -15,5 +15,5 @@
     echo "產品新增失敗" . $conn->error;
   }
   $conn->close();
-  header("Refresh:1 , url = product.php");
+  header("Refresh:1 , url = manage_product.php");
  ?>

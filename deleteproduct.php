@@ -11,5 +11,5 @@
     echo "產品刪除失敗： " . $conn->error;
   }
   $conn->close();
-  header("Refresh:1 , url = product.php");
+  header("Refresh:1 , url = manage_product.php");
  ?>

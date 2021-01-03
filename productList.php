@@ -17,6 +17,7 @@
       <div class="container">
         <div class="allproduct">
           <?php
+            session_start();
             include 'connect.php';
             $sql = "SELECT * FROM product";
             if($result = mysqli_query($conn, $sql)){
@@ -30,16 +31,18 @@
                           echo "<th>產品數量</th>";
                       echo "</tr>";
                 while($row = mysqli_fetch_array($result)){
-                      echo "<form action='neworderlist.php' method = 'post'><tr>";
+                      $_SESSION['Id'] = $row['Id'];
+                      $_SESSION['Name'] = $row['Name'];
+                      $_SESSION['Description'] = $row['Description'];
+                      $_SESSION['Price'] = $row['Price'];
+                      $_SESSION['Quantity'] = $row['Quantity'];
+                      echo "<tr>";
                           echo "<td>" . $row['Id'] . "</td>";
                           echo "<td>" . $row['Name'] . "</td>";
                           echo "<td>" . $row['Description'] . "</td>";
                           echo "<td>" . $row['Price'] . "</td>";
                           echo "<td>" . $row['Quantity'] . "</td>";
-                          echo "<td>
-                                  <input type='button' value='加入訂單' name='go_orderlist'>
-                                </td>";
-                      echo "</form></tr>";
+                      echo "</tr>";
                 }
               }
             }else{

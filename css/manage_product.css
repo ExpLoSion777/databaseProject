@@ -6,9 +6,15 @@ html, body {
     margin-top: 5%;
     padding-bottom: 50px;
     display: flex;
+    justify-content: space-around;
 }
 
 .wrapper {
     min-height: 100%;
     margin-bottom: -50px;
+}
+
+.allproduct{
+
+
 }

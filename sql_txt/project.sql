@@ -1,7 +1,7 @@
 CREATE TABLE MEMBER(
 	Id INT NOT NULL auto_increment,
-    Name TEXT NOT NULL, 
-	Account varchar(50) NOT NULL,  
+    Name TEXT NOT NULL,
+	Account varchar(50) NOT NULL,
 	Password varchar (20) NOT NULL,
     PhoneNumber TEXT,
     Address TEXT NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE MEMBER(
 CREATE TABLE PRODUCT(
 	Id INT NOT NULL auto_increment,
     Name TEXT not null,
-    ClickCount INT NOT NULL, 
+    ClickCount INT NOT NULL,
     Description TEXT,
     Price INT NOT NULL,
     Quantity INT NOT NULL,
@@ -54,5 +54,3 @@ create table COMMENT(
     foreign key (MemberId) references MEMBER(Id),
 	foreign key (ProductId) references PRODUCT(Id)
 );
-
-

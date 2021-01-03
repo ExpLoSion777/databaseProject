@@ -43,6 +43,7 @@
               echo "目前尚未上架產品";
             }
             $conn->close();
+            exit();
           ?>
         </div>
       </div>

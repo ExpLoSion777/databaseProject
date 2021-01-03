@@ -30,7 +30,7 @@
           <p><input type="submit" name="delete" value="刪除"></p>
         </form>
         <form class="modify_product" action="modifyproduct.php" method="post">
-          <p>目前修改的產品ID為：<input type="text" name = "Id"></p>
+          <p>要修改的產品ID為：<input type="text" name = "Id"></p>
           <p>要修改的名字為：<input type="text" name = "name"></p>
           <p>要修改的描述為：<input type="text" name="description"></p>
           <p>要修改的價格為：<input type="text" name="price"></p>
@@ -39,38 +39,39 @@
         </form>
       </div>
       <div class="allproduct">
-          <?php
-            require('connect.php');
-            $sql = "SELECT * FROM product";
-            if($result = mysqli_query($conn, $sql)){
-              if(mysqli_num_rows($result) > 0){
-                echo "<table>";
-                      echo "<tr>";
-                          echo "<th>產品ID</th>";
-                          echo "<th>產品名稱</th>";
-                          echo "<th>產品描述</th>";
-                          echo "<th>產品價格</th>";
-                          echo "<th>產品數量</th>";
-                      echo "</tr>";
-                while($row = mysqli_fetch_array($result)){
-                      echo "<tr>";
-                          echo "<td>" . $row['Id'] . "</td>";
-                          echo "<td>" . $row['Name'] . "</td>";
-                          echo "<td>" . $row['Description'] . "</td>";
-                          echo "<td>" . $row['Price'] . "</td>";
-                          echo "<td>" . $row['Quantity'] . "</td>";
-                      echo "</tr>";
-                }
+        <?php
+          include ('connect.php');
+          $sql = "SELECT * FROM product";
+          if($result = mysqli_query($conn, $sql)){
+            if(mysqli_num_rows($result) > 0){
+              echo "<table>";
+                    echo "<tr>";
+                        echo "<th>產品ID</th>";
+                        echo "<th>產品名稱</th>";
+                        echo "<th>產品描述</th>";
+                        echo "<th>產品價格</th>";
+                        echo "<th>產品數量</th>";
+                    echo "</tr>";
+              while($row = mysqli_fetch_array($result)){
+                    echo "<tr>";
+                        echo "<td>" . $row['Id'] . "</td>";
+                        echo "<td>" . $row['Name'] . "</td>";
+                        echo "<td>" . $row['Description'] . "</td>";
+                        echo "<td>" . $row['Price'] . "</td>";
+                        echo "<td>" . $row['Quantity'] . "</td>";
+                    echo "</tr>";
               }
-            }else{
-              echo "目前商場內沒有產品";
             }
-           $conn->close();
-           ?>
+          }else{
+            echo "目前商場內沒有產品";
+          }
+         $conn->close();
+         exit();
+         ?>
       </div>
     </div>
   </div>
 </body>
-<?php include 'footer.php'; ?>
+<?php include ('footer.php'); ?>
 
 </html>

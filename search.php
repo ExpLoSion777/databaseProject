@@ -26,7 +26,7 @@
       }
     }
   }else{
-    echo "目前沒有這個產品";
+    echo "目前沒有名稱類似的產品";
   }
   $conn->close();
   header("Refresh:3, url = index.php");

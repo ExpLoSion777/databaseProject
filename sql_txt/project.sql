@@ -8,6 +8,7 @@ CREATE TABLE MEMBER(
     Sex TEXT NOT NULL,
     Birthday DATE NOT NULL,
     Email TEXT NOT NULL,
+    SessionId varchar(135),
     primary key(Id)
 );
 
@@ -24,8 +25,10 @@ CREATE TABLE PRODUCT(
 create table ORDERLIST(
 	Id INT NOT NULL auto_increment,
     MemberId INT NOT NULL,
+    ProductId INT NOT NULL,
     ProductQuantity INT NOT NULL,
     foreign key (MemberId) references MEMBER(Id),
+    foreign key (ProductId) references PRODUCT(Id),
     primary key(Id)
 );
 

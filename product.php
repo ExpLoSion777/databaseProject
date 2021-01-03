@@ -30,13 +30,16 @@
                           echo "<th>產品數量</th>";
                       echo "</tr>";
                 while($row = mysqli_fetch_array($result)){
-                      echo "<tr>";
+                      echo "<form action='neworderlist.php' method = 'post'><tr>";
                           echo "<td>" . $row['Id'] . "</td>";
                           echo "<td>" . $row['Name'] . "</td>";
                           echo "<td>" . $row['Description'] . "</td>";
                           echo "<td>" . $row['Price'] . "</td>";
                           echo "<td>" . $row['Quantity'] . "</td>";
-                      echo "</tr>";
+                          echo "<td>
+                                  <input type='button' value='加入訂單' name='go_orderlist'>
+                                </td>";
+                      echo "</form></tr>";
                 }
               }
             }else{

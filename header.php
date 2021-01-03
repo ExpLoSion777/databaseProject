@@ -24,6 +24,7 @@
     <input type="text" placeholder="Search" name="productname">
     <button type="submit">搜尋</button>
   </form>
+  <div class="productlist"><a class="btn btn-primary" href="./orderlist.php" role="button">查看目前訂單</a></div>
   <div class="productlist"><a class="btn btn-primary" href="./product.php" role="button">商品列表</a></div>
   <div class="shopping_cart"><a href="./shopping_cart.php">購物車<img src="./img/shopping_cart.png" width="40px" height="40px"></div>
   <div class="manageproduct"><a class="btn btn-primary" href="./manage_product.php" role="button">管理商品</a></div>

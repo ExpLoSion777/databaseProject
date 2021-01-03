@@ -49,9 +49,9 @@
                     ?>
 
                     <div class="form-group">
-                        <input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if (isset($error)) {
-                                                                                                                                            echo htmlspecialchars($_POST['username'], ENT_QUOTES);
-                                                                                                                                        } ?>" tabindex="1">
+                        <input type="text" name="account" id="account" class="form-control input-lg" placeholder="Account" value="<?php if (isset($error)) {
+                                                                                                                                        echo htmlspecialchars($_POST['account'], ENT_QUOTES);
+                                                                                                                                    } ?>" tabindex="1">
                     </div>
 
                     <div class="form-group">

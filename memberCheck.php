@@ -12,7 +12,7 @@ if ($account == '' || $password == '') {
     $user = mysqli_fetch_assoc($data);
 
     session_start();
-    $_SESSION['id'] = $user['Id'];
+    $_SESSION['memberId'] = $user['Id'];
     $_SESSION['name'] = $user['Name'];
     $_SESSION['account'] = $user['Account'];
     $_SESSION['password'] = $user['Password'];

@@ -1,13 +1,16 @@
-<?php require 'productList.php'
-  $pid = $_SESSION['Id'];
-  $name = $_SESSION['Name'];
-  $description = $_SESSION['Description'];
-  $price = $_SESSION['Price'];
-  $quantity = $_SESSION['Quantity'];
-  $foreach_array = array('Id' => $pid, 'Name'=>$name, 'Description' = $description, 'Price' = $price, 'Quantity' = $quantity);
-  foreach ($foreach_array as $key => $value) {
-    // code...
-  }
+<?php require 'productList.php';
+session_start();
+
+$pid = $_SESSION['productId'];
+$name = $_SESSION['Name'];
+$description = $_SESSION['Description'];
+$price = $_SESSION['Price'];
+$quantity = $_SESSION['Quantity'];
+$foreach_array = array('Id' => $pid, 'Name' => $name, 'Description' = $description, 'Price' = $price, 'Quantity' = $quantity);
+foreach ($foreach_array as $key => $value) {
+  // code...
+  echo "$key = $value<br>";
+}
 ?>
 
 <head>
@@ -21,7 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   <title><?php if (isset($title)) {
             echo $title;
-  } ?></title>
+          } ?></title>
 
   <?php include 'header.php' ?>
 

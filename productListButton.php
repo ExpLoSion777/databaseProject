@@ -10,3 +10,4 @@ if (isset($_POST['ToOrderList'])) {
     //move to one product
     header("Location: one_product.php");
 }
+?>

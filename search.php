@@ -9,15 +9,19 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   <link href="./css/style.css" rel="stylesheet">
-  <link href="./css/product.css" rel="stylesheet">
+  <link href="./css/search.css" rel="stylesheet">
 </head>
 <?php include 'header.php'; ?>
   <body>
     <div class="wrapper">
       <div class="container">
-        <div class="allproduct">
+        <div class="searchproduct">
           <?php
             $name = $_POST['productname'];
+            if($name == ''){
+              echo "請輸入商品名稱";
+              header("Location: index.php");
+            }
             include 'connect.php';
             $sql = "SELECT * FROM product Where Name LIKE '$name%'";
             if($result = mysqli_query($conn, $sql)){
@@ -43,8 +47,12 @@
                       echo "</form></tr>";
                 }
               }
+              else{
+                echo "無此名稱相似的產品";
+                header("Refresh:1 url=index.php");
+              }
             }else{
-              echo "目前尚未上架產品";
+              echo "query錯誤";
             }
             $conn->close();
             exit();

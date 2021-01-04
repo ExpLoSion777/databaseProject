@@ -68,6 +68,7 @@
           echo "目前商場內沒有產品";
         }
         $conn->close();
+        exit(); //還是不要顯示footer好了 比較好看一點
         ?>
       </div>
     </div>

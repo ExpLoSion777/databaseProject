@@ -37,14 +37,14 @@
                 $_SESSION['Description'] = $row['Description'];
                 $_SESSION['Price'] = $row['Price'];
                 $_SESSION['Quantity'] = $row['Quantity'];
-                echo "<form method ="post" action ="productListButton.php"><tr>";
+                echo "<form method ='post' action ='productListButton.php'><tr>";
                   echo "<td>" . $row['Id'] . "</td>";
                   echo "<td>" . $row['Name'] . "</td>";
                   echo "<td>" . $row['Description'] . "</td>";
                   echo "<td>" . $row['Price'] . "</td>";
                   echo "<td>" . $row['Quantity'] . "</td>";
-                  echo "<td><input type="button" name="ToOrderList" value="加到購物車"></td>";     
-                  echo "<td><input type="button" name="ToOneProduct" value="檢視產品"></td>";
+                  echo "<td><input type='button' name='ToOrderList' value='加到購物車'></td>";
+                  echo "<td><input type='button' name='ToOneProduct' value='檢視產品'></td>";
                 echo "</form></tr>";
               }
             }

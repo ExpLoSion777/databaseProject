@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +30,12 @@
   <div class="productlist"><a class="btn btn-primary" href="./productList.php" role="button">商品列表</a></div>
   <div class="shopping_cart"><a href="./shopping_cart.php">購物車<img src="./img/shopping_cart.png" width="40px" height="40px"></div>
   <div class="manageproduct"><a class="btn btn-primary" href="./manage_product.php" role="button">管理商品</a></div>
-  <div class="register"><a class="btn btn-primary" href="./register.php" role="button">註冊</a></div>
-  <div class="login"><a class="btn btn-primary" href="./login.php" role="button">登入</a></div>
+  <?php if(!isset($_SESSION['memberId'])){
+    echo '  <div class="register"><a class="btn btn-primary" href="./register.php" role="button">註冊</a></div>';
+    echo '  <div class="login"><a class="btn btn-primary" href="./login.php" role="button">登入</a></div>';
+  }else{
+    echo "<div class='memberdata'><h4>Hello！ ".$_SESSION['name']."</h4></div>";
+    echo '<div class="logout"><a class="btn btn-primary" href="./logout.php" role="button">登出</a></div>';
+  }
+  ?>
 </div>

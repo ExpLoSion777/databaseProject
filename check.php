@@ -4,7 +4,7 @@
     echo "帳號密碼錯誤，請重新輸入";
     header('Refresh:2, url=login.php');
   }else{
-    echo "帳號登入成功，兩秒後回到首頁";
+    echo "帳號 ".$_SESSION['name']."登入成功，兩秒後回到首頁";
     header('Refresh:2, url=index.php');
   }
  ?>

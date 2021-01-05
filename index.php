@@ -66,22 +66,54 @@ $title = '線上3C商城';
     </div>
 
     <div class="layout">
-      <div class="newest_photo">
-        <!--改成最新上架的商品-->
-        <a href="product.php"><img src="img/nvd_3080.png" alt="">
-          <div class="intro">
-            目前最新上架的商品，
+          <div class="new_photobar">
+            <div class="newest_photo">
+              <!--改成最新上架的商品-->
+              <a href="product.php"><img src="img/nvd_3080.png" alt="">
+                <div class="intro">
+                  目前最新上架的商品1
+                </div>
+              </a>
+            </div>
+            <div class="newest_photo2">
+              <a href="product.php"><img src="img/keyboard1.png" width="240px" height = "240px"alt="">
+                <div class="intro">
+                  目前最新上架的商品2
+                </div>
+              </a>
+            </div>
+            <div class="newest_photo3">
+              <a href="product.php"><img src="img/keyboard2.png" width="240px" height = "240px" alt="">
+                <div class="intro">
+                  目前最新上架的商品3
+                </div>
+              </a>
+            </div>
+        </div>
+        <div class="new_photobar">
+          <div class="hottest_photo">
+            <a href="product.php"><img src="img/keyboard.png" alt="">
+              <div class="intro">
+                目前最熱銷的商品1
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="hottest_photo">
-        <!--改成最暢銷的商品,star-->
-        <a href="product.php"><img src="img/keyboard.png" alt="">
-          <div class="intro">
-            目前最熱銷的商品，
+
+          <div class="hottest_photo2">
+            <a href="product.php"><img src="img/mouse1.png" width="240px" height = "240px" alt="">
+              <div class="intro">
+                目前最熱銷的商品2
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
+          <div class="hottest_photo3">
+            <a href="product.php"><img src="img/mouse2.png" width="240px" height = "240px" alt="">
+              <div class="intro">
+                目前最熱銷的商品3
+              </div>
+            </a>
+          </div>
+        </div>
     </div>
   </div>
 </div>

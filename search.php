@@ -28,6 +28,7 @@
               if(mysqli_num_rows($result) > 0){
                 echo "<table>";
                       echo "<tr>";
+                          echo "<th>賣家ID</th>";
                           echo "<th>產品ID</th>";
                           echo "<th>產品名稱</th>";
                           echo "<th>產品描述</th>";
@@ -36,6 +37,7 @@
                       echo "</tr>";
                 while($row = mysqli_fetch_array($result)){
                       echo "<form action='new_orderlist.php' method = 'post'><tr>";
+                          echo "<td>" . $row['MemberId'] . "</td>";
                           echo "<td>" . $row['Id'] . "</td>";
                           echo "<td>" . $row['Name'] . "</td>";
                           echo "<td>" . $row['Description'] . "</td>";

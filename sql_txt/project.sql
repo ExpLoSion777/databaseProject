@@ -14,11 +14,12 @@ CREATE TABLE MEMBER(
 
 CREATE TABLE PRODUCT(
 	Id INT NOT NULL auto_increment,
+    MemberId int not null,
     Name TEXT not null,
-    ClickCount INT NOT NULL,
     Description TEXT,
     Price INT NOT NULL,
     Quantity INT NOT NULL,
+    foreign key(MemberId) references MEMBER(Id),
     primary key(Id)
 );
 

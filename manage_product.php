@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-tw">
 
@@ -13,9 +14,15 @@
 
 
 </head>
-<?php include 'header.php'; ?>
+<?php
+  include 'header.php';
+  if(!isset($_SESSION['memberId'])){
+    echo '<div class="nologin"><p>尚未登入</p></div>';
+    header("Refresh:1, url=login.php");
+    exit();
+  }
+ ?>
 <!--修改allproduct位置-->
-
 <body>
   <div class="wrapper">
     <div class="container">
@@ -43,7 +50,7 @@
       <div class="allproduct">
         <?php
         include('connect.php');
-        $sql = "SELECT * FROM product";
+        $sql = "SELECT * FROM product Where MemberId = ".$_SESSION['memberId']."";
         if ($result = mysqli_query($conn, $sql)) {
           if (mysqli_num_rows($result) > 0) {
             echo "<table>";
